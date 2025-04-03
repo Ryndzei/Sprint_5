@@ -1,5 +1,3 @@
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions
 from locators import BUNS_SECTION, SAUCES_SECTION, FILLINGS_SECTION
 from urls import BASE_URL
 
@@ -7,19 +5,21 @@ from urls import BASE_URL
 def test_successful_select_sauces_section(driver):
     driver.get(BASE_URL)
 
-    element = WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(SAUCES_SECTION))
-    assert element is not None
+    driver.find_element(*SAUCES_SECTION).click()
+
+    assert "tab_tab_type_current__2BEPc" in driver.find_element(*SAUCES_SECTION).get_attribute("class")
 
 def test_successful_select_fillings_section(driver):
     driver.get(BASE_URL)
 
-    element = WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(FILLINGS_SECTION))
-    assert element is not None
+    driver.find_element(*FILLINGS_SECTION).click()
+
+    assert "tab_tab_type_current__2BEPc" in driver.find_element(*FILLINGS_SECTION).get_attribute("class")
 
 def test_successful_select_buns_section(driver):
     driver.get(BASE_URL)
 
     driver.find_element(*FILLINGS_SECTION).click()
+    driver.find_element(*BUNS_SECTION).click()
 
-    element = WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(BUNS_SECTION))
-    assert element is not None
+    assert "tab_tab_type_current__2BEPc" in driver.find_element(*BUNS_SECTION).get_attribute("class")

@@ -24,6 +24,6 @@ LOGOUT_BUTTON = (By.XPATH, './/ul/li[3]/button')  # Кнопка выхода
 # Конструктор
 CONSTRUCTOR_LINK = (By.XPATH, './/li[1]/a/p[text()="Конструктор"]')  # Ссылка на конструктор
 LOGO_LINK = (By.XPATH, './/nav/div/a[@href="/"]')  # Логотип Stellar Burgers
-BUNS_SECTION = (By.XPATH, './/section[1]/div[1]/div[1]/span[text()="Булки"]')  # Раздел "Булки"
-SAUCES_SECTION = (By.XPATH, './/section[1]/div[1]/div[2]/span[text()="Соусы"]')  # Раздел "Соусы"
-FILLINGS_SECTION = (By.XPATH, './/section[1]/div[1]/div[3]/span[text()="Начинки"]')  # Раздел "Начинки"
+BUNS_SECTION = (By.XPATH, './/section[1]/div[1]/div[1]')  # Раздел "Булки"
+SAUCES_SECTION = (By.XPATH, './/section[1]/div[1]/div[2]')  # Раздел "Соусы"
+FILLINGS_SECTION = (By.XPATH, './/section[1]/div[1]/div[3]')  # Раздел "Начинки"
