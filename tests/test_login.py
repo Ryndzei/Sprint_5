@@ -1,12 +1,7 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from urls import BASE_URL, REGISTER_URL, PASS_FORGOT_URL
-from locators import (
-    LOGIN_EMAIL_INPUT, LOGIN_PASSWORD_INPUT,
-    LOGIN_BUTTON, LOGIN_ACCOUNT_BUTTON,
-    PERSONAL_CABINET_LINK, LOGIN_FROM_REGISTER,
-    LOGIN_FROM_RECOVERY, LOGOUT_BUTTON
-)
+from locators import *
 
 
 def test_successful_login_from_main_page(driver):
