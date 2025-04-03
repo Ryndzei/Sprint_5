@@ -26,8 +26,6 @@ def test_successfully_went_to_main_page_by_clicking_constructor(driver):
 
     assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
 
-    driver.quit()
-
 def test_successfully_went_to_main_page_by_clicking_logo(driver):
     driver.get("https://stellarburgers.nomoreparties.site")
 
@@ -45,5 +43,3 @@ def test_successfully_went_to_main_page_by_clicking_logo(driver):
     driver.find_element(*LOGO_LINK).click()
 
     assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
-
-    driver.quit()

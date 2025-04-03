@@ -9,15 +9,11 @@ def test_successful_select_sauces_section(driver):
     element = WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(SAUCES_SECTION))
     assert element is not None
 
-    driver.quit()
-
 def test_successful_select_fillings_section(driver):
     driver.get("https://stellarburgers.nomoreparties.site")
 
     element = WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(FILLINGS_SECTION))
     assert element is not None
-
-    driver.quit()
 
 def test_successful_select_buns_section(driver):
     driver.get("https://stellarburgers.nomoreparties.site")
@@ -26,7 +22,3 @@ def test_successful_select_buns_section(driver):
 
     element = WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(BUNS_SECTION))
     assert element is not None
-
-    driver.quit()
-
-

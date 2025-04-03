@@ -22,8 +22,6 @@ def test_successful_login_from_main_page(driver):
 
     assert "account" in driver.current_url
 
-    driver.quit()
-
 def test_successful_login_from_personal_cabinet(driver):
     driver.get("https://stellarburgers.nomoreparties.site")
 
@@ -37,8 +35,6 @@ def test_successful_login_from_personal_cabinet(driver):
     driver.find_element(*PERSONAL_CABINET_LINK).click()
 
     assert "account" in driver.current_url
-
-    driver.quit()
 
 def test_successful_login_from_registration_form(driver):
     driver.get("https://stellarburgers.nomoreparties.site/register")
@@ -54,8 +50,6 @@ def test_successful_login_from_registration_form(driver):
 
     assert "account" in driver.current_url
 
-    driver.quit()
-
 def test_successful_login_from_password_recovery_form(driver):
     driver.get("https://stellarburgers.nomoreparties.site/forgot-password")
 
@@ -69,5 +63,3 @@ def test_successful_login_from_password_recovery_form(driver):
     driver.find_element(*PERSONAL_CABINET_LINK).click()
 
     assert "account" in driver.current_url
-
-    driver.quit()

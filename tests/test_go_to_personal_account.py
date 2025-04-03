@@ -22,5 +22,3 @@ def test_successfully_went_to_personal_account(driver):
     WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(LOGOUT_BUTTON))
 
     assert "profile" in driver.current_url
-
-    driver.quit()

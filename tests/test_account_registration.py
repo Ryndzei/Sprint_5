@@ -16,8 +16,6 @@ def test_successful_registration(driver):
 
     assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
 
-    driver.quit()
-
 def test_unsuccessful_registration_invalid_password(driver):
     driver.get("https://stellarburgers.nomoreparties.site/register")
 
@@ -29,5 +27,3 @@ def test_unsuccessful_registration_invalid_password(driver):
     WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(PASSWORD_ERROR))
 
     assert driver.current_url == "https://stellarburgers.nomoreparties.site/register"
-
-    driver.quit()

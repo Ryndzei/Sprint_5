@@ -26,5 +26,3 @@ def test_successfully_logout(driver):
     WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located(LOGIN_BUTTON))
 
     assert driver.current_url == "https://stellarburgers.nomoreparties.site/login"
-
-    driver.quit()
