@@ -1,5 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
+from urls import BASE_URL
 from locators import (
     LOGIN_EMAIL_INPUT, LOGIN_PASSWORD_INPUT,
     LOGIN_BUTTON, LOGIN_ACCOUNT_BUTTON,
@@ -9,7 +10,7 @@ from locators import (
 
 
 def test_successfully_went_to_main_page_by_clicking_constructor(driver):
-    driver.get("https://stellarburgers.nomoreparties.site")
+    driver.get(BASE_URL)
 
     driver.find_element(*LOGIN_ACCOUNT_BUTTON).click()
     driver.find_element(*LOGIN_EMAIL_INPUT).send_keys("antonrineyskiy1939@yandex.ru")
@@ -24,10 +25,10 @@ def test_successfully_went_to_main_page_by_clicking_constructor(driver):
 
     driver.find_element(*CONSTRUCTOR_LINK).click()
 
-    assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
+    assert driver.current_url == BASE_URL
 
 def test_successfully_went_to_main_page_by_clicking_logo(driver):
-    driver.get("https://stellarburgers.nomoreparties.site")
+    driver.get(BASE_URL)
 
     driver.find_element(*LOGIN_ACCOUNT_BUTTON).click()
     driver.find_element(*LOGIN_EMAIL_INPUT).send_keys("antonrineyskiy1939@yandex.ru")
@@ -42,4 +43,4 @@ def test_successfully_went_to_main_page_by_clicking_logo(driver):
 
     driver.find_element(*LOGO_LINK).click()
 
-    assert driver.current_url == "https://stellarburgers.nomoreparties.site/"
+    assert driver.current_url == BASE_URL

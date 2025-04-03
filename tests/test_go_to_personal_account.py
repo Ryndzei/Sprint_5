@@ -1,5 +1,6 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
+from urls import BASE_URL
 from locators import (
     LOGIN_EMAIL_INPUT, LOGIN_PASSWORD_INPUT,
     LOGIN_BUTTON, LOGIN_ACCOUNT_BUTTON,
@@ -8,7 +9,7 @@ from locators import (
 
 
 def test_successfully_went_to_personal_account(driver):
-    driver.get("https://stellarburgers.nomoreparties.site")
+    driver.get(BASE_URL)
 
     driver.find_element(*LOGIN_ACCOUNT_BUTTON).click()
     driver.find_element(*LOGIN_EMAIL_INPUT).send_keys("antonrineyskiy1939@yandex.ru")
