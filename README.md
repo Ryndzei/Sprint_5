@@ -1,5 +1,5 @@
 # StellarBurgers UI Tests
-Автоматизация тестирования [Stellar Burgers](https://stellarburgers.nomoreparties.site/)
+Автоматизация тестирования [Stellar Burgers](https://stellarburgers.nomoreparties.site/) (вне Page Object Model)
 
 Были выполнены проверки по следующим сценариям:
 
@@ -27,7 +27,7 @@
 
 ---
 ### Структура репозитория
-#### В корне проекта находятся файлы с [валидными данными для входа в профиль](test_data.py), [URLs](urls.py) и [функции для генерации (email, пароль)](generators.py)
+#### В корне проекта находятся файлы с [валидными данными для входа в профиль](test_data.py), [URLs](urls.py), [функциями для генерации (email, пароль)](generators.py) и [описанием локаторов для элементов на страницах](locators.py)
 
 #### В папке [tests](tests) находятся тесты.
 
